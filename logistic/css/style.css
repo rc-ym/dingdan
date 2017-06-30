@@ -1,0 +1,131 @@
+/*头部*/
+.header {
+  width: 100%;
+  height: 80px;
+}
+.header .logo_nav {
+  width: 1000px;
+  min-width: 1000px;
+  height: 80px;
+  margin: 0 auto;
+}
+.header .logo_nav:after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+}
+.header .logo_nav .logo {
+  width: 185px;
+  height: 100%;
+  line-height: 80px;
+}
+.header .logo_nav .nav {
+  width: 815px;
+  height: 100%;
+  line-height: 80px;
+}
+.header .logo_nav .nav li {
+  padding: 0 20px;
+}
+.header .logo_nav .nav li:first-child {
+  margin-left: 30px;
+}
+.header .logo_nav .nav li i {
+  display: inline-block;
+  width: 28px;
+  height: 23px;
+  vertical-align: middle;
+}
+.header .logo_nav .nav li a {
+  color: #808080;
+}
+.header .logo_nav .nav li:hover a {
+  color: #FF7F09;
+}
+.header .logo_nav .nav li:nth-child(1) i {
+  background: url(../images/sprite.png) no-repeat 0 -172px;
+}
+.header .logo_nav .nav li:nth-child(1):hover i {
+  background: url(../images/sprite.png) no-repeat 0 -201px;
+}
+.header .logo_nav .nav li:nth-child(2) i {
+  background: url(../images/sprite.png) no-repeat 0 -227px;
+}
+.header .logo_nav .nav li:nth-child(2):hover i {
+  background: url(../images/sprite.png) no-repeat 0 -252px;
+}
+.header .logo_nav .nav li:nth-child(3) i {
+  background: url(../images/sprite.png) no-repeat 0 -6px;
+}
+.header .logo_nav .nav li:nth-child(3):hover i {
+  background: url(../images/sprite.png) no-repeat 0 -43px;
+}
+.header .logo_nav .nav li:nth-child(4) i {
+  background: url(../images/sprite.png) no-repeat 0 -73px;
+}
+.header .logo_nav .nav li:nth-child(4):hover i {
+  background: url(../images/sprite.png) no-repeat 0 -96px;
+}
+.header .logo_nav .nav li:nth-child(5) i {
+  background: url(../images/sprite.png) no-repeat 0 -120px;
+}
+.header .logo_nav .nav li:nth-child(5):hover i {
+  background: url(../images/sprite.png) no-repeat 0 -145px;
+}
+.header .logo_nav .nav:after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+}
+.banner_box {
+  width: 100%;
+  height: 400px;
+  min-width: 1000px;
+  position: relative;
+}
+.banner_box .banner_tu_box {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.banner_box .banner_tu_box .banner_tu {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.banner_box .banner_btn_box {
+  width: 66px;
+  height: 15px;
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  margin-left: -33px;
+}
+.banner_box .banner_btn_box .banner_btn {
+  width: 12px;
+  height: 11px;
+  margin: 0 5px;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.5);
+  float: left;
+}
+.banner_box .banner_btn_box .banner_btn.active {
+  background: rgba(230, 127, 7, 0.5);
+}
+/*底部*/
+.footer_box {
+  width: 100%;
+  height: 35px;
+  background: #FF7F09;
+}
+.footer_box .footer {
+  width: 1000px;
+  line-height: 35px;
+  color: #fff;
+  font-size: 14px;
+  margin: 0 auto;
+}
