@@ -2,55 +2,51 @@
 .main {
   width: 1000px;
   min-width: 1000px;
-  height: 410px;
   margin: 20px auto;
 }
-.main .left {
-  width: 365px;
-  height: 100%;
-  border: 1px solid #E7E7E7;
+.main .about{
+  width: 100%;
+  height: 170px;
+  padding: 9px;
+  margin-bottom: 20px;
   background: #fff;
 }
-.main .left .img_box {
-  width: 100%;
-  height: 152px;
+.main .about .about_img{
+  float: left;
+  width: 400px;
 }
-.main .left .img_box img {
-  width: 100%;
+.main .about .about_img img{
+  height: 100%;
 }
-.main .left .content {
-  width: 100%;
-  height: 210px;
+.main .about .about_text{
+  float: left;
+  width: 560px;
 }
-.main .left .content h2 {
+.main .about .about_text h2{
   font-size: 18px;
   text-align: center;
   color: #083499;
   line-height: 30px;
   font-weight: bold;
-  margin-top: 10px;
 }
-.main .left .content p {
+.main .about .about_text p {
   font-size: 14px;
   color: gray;
   line-height: 28px;
   padding: 8px;
+  text-overflow:ellipsis; 
+  overflow:hidden;
+  display:-webkit-box; 
+  -webkit-line-clamp:4; 
+  -webkit-box-orient: vertical;
 }
-.main .left .link {
-  text-align: right;
-  padding-right: 30px;
-  padding-bottom: 10px;
-}
-.main .left .link a {
-  color: #083499;
-}
-.main .left .link a i {
-  display: inline-block;
-  vertical-align: middle;
-  width: 15px;
-  height: 15px;
-  background: url("../images/link.png") no-repeat center / cover;
-  margin-right: 3px;
+
+
+.main .affiche:after{
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
 }
 .main .center {
   width: 365px;
@@ -58,6 +54,9 @@
   border: 1px solid #E7E7E7;
   margin: 0 10px;
   background: #fff;
+}
+.main .center:first-child{
+  margin: 0;
 }
 .main .center .img_box {
   width: 100%;
@@ -68,7 +67,6 @@
 }
 .main .center .content {
   width: 100%;
-  height: 210px;
 }
 .main .center .content h2 {
   font-size: 18px;
@@ -165,7 +163,7 @@
   cursor: pointer;
 }
 .main .right .list_ul {
-  height: 247px;
+  height: 342px;
   width: 100%;
   border: 1px solid #E7E7E7;
   background: #fff;
@@ -173,7 +171,7 @@
 }
 .main .right .list_ul li {
   width: 50%;
-  height: 33.33333%;
+  height: 16.66666666%;
   float: left;
   text-align: center;
 }
