@@ -9,13 +9,13 @@
 //功能：转换对象，使用递归，逐层剥到文本；  
 function transformContent(switcherId, fobj){  
     if(typeof(fobj)=="object"){  
-        var obj=fobj.childNodes  
+        var obj=fobj.childNodes  //获取fobj的子元素集合。
     } else {      
         if(parseInt(fobj)!=0){ //在页面初始化时控制不更新当前页面语言状态；  
             var switcherObj = document.getElementById(switcherId);  
             with(switcherObj){  
                 if(parseInt(isCurrentFt)){  
-                    innerHTML = innerHTML.replace('简','繁')  
+                    innerHTML = innerHTML.replace('简','繁')  //用一些字符替换另一些字符
                     title = title.replace('简','繁')  
                 }else{  
                     innerHTML = innerHTML.replace('繁','简')  
@@ -25,7 +25,11 @@ function transformContent(switcherId, fobj){
             switcherObj.innerHTML=transformText(switcherObj.innerHTML, isCurrentFt)  
             switcherObj.title=transformText(switcherObj.title, isCurrentFt)   
               
-            if(isCurrentFt=="1"){isCurrentFt="0"}else{isCurrentFt="1"}  
+            if(isCurrentFt=="1"){
+                isCurrentFt="0"
+            }else{
+                isCurrentFt="1"
+            }  
             writeCookie("isCurrentFt",isCurrentFt)  
         }  
         var obj=document.body.childNodes  
@@ -105,7 +109,7 @@ var isCurrentFt;
 //  delay 页面加载后的转换延迟时间，单位毫秒；  
 //  使用的 Cookie 变量名称：isCurrentFt  
 function initPageLanguage(switcherId, isDefaultFt, delay){  
-    isDefaultFt = isDefaultFt?"1":"0";  
+    isDefaultFt = isDefaultFt?"0":"1";  
     var switcherObj=document.getElementById(switcherId)  
     isCurrentFt=readCookie("isCurrentFt")  
     if(isCurrentFt==null || isCurrentFt=="") isCurrentFt=isDefaultFt  
@@ -127,4 +131,4 @@ function initPageLanguage(switcherId, isDefaultFt, delay){
     if(isCurrentFt!=isDefaultFt){setTimeout("transformContent('"+ switcherId +"',0)",delay)}  
 }  
 // 初始化调用接口  
-//initPageLanguage("switcher_link", false, 50);  
+initPageLanguage("switcher_link", false, 50);  

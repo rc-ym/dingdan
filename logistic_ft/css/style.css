@@ -21,12 +21,12 @@
   line-height: 80px;
 }
 .header .logo_nav .nav {
-  width: 650px;
+  width: 700px;
   height: 100%;
   line-height: 80px;
 }
 .header .logo_nav .nav li {
-  padding: 0 10px;
+  padding: 0 15px;
 }
 .header .logo_nav .nav li:first-child {
   margin-left: 30px;
@@ -80,7 +80,7 @@
   clear: both;
 }
 .header .logo_nav .jt_ft_qh{
-  width: 150px;
+  width: 80px;
   line-height: 80px;
   font-size: 14px;
 }

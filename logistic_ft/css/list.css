@@ -48,6 +48,11 @@
 }
 .main .content .bottom li a {
   color: gray;
+  display: inline-block;
+  width: 600px;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
 }
 .main .content .bottom li span {
   float: right;
