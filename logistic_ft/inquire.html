@@ -6,7 +6,7 @@
     <script src="js/jquery-3.2.1.min.js"></script>
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src='js/transfrom.js'></script>
+   
     <link rel="stylesheet" href="css/inquire.css">
     <script src="js/inquire.js"></script>
 </head>
@@ -53,8 +53,7 @@
             </li>
         </ul>
         <div class="jt_ft_qh fl">
-            <a href="JavaScript:s22t()">繁體中文</a>
-            <a href="javascript:t22s()">簡體中文</a> 
+            <a id="switcher_link" href="#">繁体中文</a>
         </div>
     </div>
 </div>
@@ -71,9 +70,7 @@
         </div>
     </div>
     <div class="content" style="display: none;">
-        <h5>申必達快遞運單號:<span>123121212112</span></h5>
-        <img src="images/ewm.png" alt="">
-        <table border="2">
+        <!-- <table border="2">
             <tr>
                 <th width="200">時間</th>
                 <th>跟蹤進度</th>
@@ -106,10 +103,43 @@
                 <td>2017-02-16 07:01:14</td>
                 <td>網點收到包裹-休斯頓點</td>
             </tr>
-        </table>
-        <p>
+        </table> -->
+       <!--  <p>
             溫馨提示：以上顯示的時間為中國北京時間
-        </p>
+        </p> -->
+        <!-- <h5>申必達快遞運單號:<span>123121212112</span></h5>
+        <img src="images/ewm.png" alt=""> -->
+        <ul class="text_div">
+            <li>
+                <div class="left_text">
+                    平臺：<span>京東</span>
+                </div>
+                <div class="right_text">
+                    店鋪名稱：<span>店鋪</span>
+                </div>
+            </li>
+            <li>
+                <div class="left_text">
+                    訂單編號：<span>121212121212</span>
+                </div>
+                <div class="right_text">
+                    物流編號：<span>121212121212</span>
+                </div>
+            </li>
+        </ul>
+        <h5>運單追蹤記錄</h5>
+        <div class="div_box">
+            <p>2017-10-10 15:40:35&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;網點收到包裹-休斯頓點</p>
+            <p>2017-10-10 15:40:35&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;網點收到包裹-休斯頓點</p>
+            <p>2017-10-10 15:40:35&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;網點收到包裹-休斯頓點</p>
+            <p>2017-10-10 15:40:35&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;網點收到包裹-休斯頓點</p>
+            <p>2017-10-10 15:40:35&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;網點收到包裹-休斯頓點</p>
+            <p>2017-10-10 15:40:35&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;網點收到包裹-休斯頓點</p>
+            <p>2017-10-10 15:40:35&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;網點收到包裹-休斯頓點</p>
+            <p>2017-10-10 15:40:35&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;網點收到包裹-休斯頓點</p>
+            <p>2017-10-10 15:40:35&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;網點收到包裹-休斯頓點</p>
+            <p>2017-10-10 15:40:35&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;網點收到包裹-休斯頓點</p>
+        </div>
     </div>
     <div class="jiaz" style="display: none;">
         <img src="images/loading.gif" alt="">
@@ -128,13 +158,5 @@
     </div>
 </div>
 </body>
-<script type="text/JavaScript" language="JavaScript">  
-    var obj = document.body;  
-    function s22t(){   
-    obj.innerHTML=s2t(obj.innerHTML);   
-    }   
-    function t22s(){   
-    obj.innerHTML=t2s(obj.innerHTML);   
-    }  
-</script>  
+ <script src='js/transfrom.js'></script>
 </html>

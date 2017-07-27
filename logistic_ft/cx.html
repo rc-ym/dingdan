@@ -6,7 +6,6 @@
     <script src="js/jquery-3.2.1.min.js"></script>
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src='js/transfrom.js'></script>
     <link rel="stylesheet" href="css/cx.css">
 </head>
 <body>
@@ -52,8 +51,7 @@
             </li>
         </ul>
         <div class="jt_ft_qh fl">
-            <a href="JavaScript:s22t()">繁體中文</a>
-            <a href="javascript:t22s()">簡體中文</a> 
+            <a id="switcher_link" href="#">繁体中文</a>
         </div>
     </div>
 </div>
@@ -115,13 +113,5 @@
     </div>
 </div>
 </body>
-<script type="text/JavaScript" language="JavaScript">  
-    var obj = document.body;  
-    function s22t(){   
-    obj.innerHTML=s2t(obj.innerHTML);   
-    }   
-    function t22s(){   
-    obj.innerHTML=t2s(obj.innerHTML);   
-    }  
-</script>  
+<script src='js/transfrom.js'></script>
 </html>
