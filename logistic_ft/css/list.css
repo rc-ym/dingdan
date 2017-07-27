@@ -26,13 +26,37 @@
 }
 .main .content .top {
   width: 760px;
-  height: 98px;
-  border-radius: 10px;
-  background: #F7F7F7;
+  border-radius: 5px;
+  border: 1px solid #ccd3df;
   margin: 29px auto;
-  padding: 10px;
   font-size: 12px;
   line-height: 26px;
+}
+.main .content .top .title{
+  height: 30px;
+  line-height: 30px;
+  border-bottom: 1px solid #ccd3df;
+  font-weight: bold;
+  padding: 0 20px;
+  font-size: 14px;
+}
+.main .content .top ul{
+  padding: 5px;
+}
+.main .content .top ul:after{
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+}
+.main .content .top ul>li{
+  float: left;
+  width: 20%;
+  text-align: center;
+  padding: 5px 0;
+}
+.main .content .top ul>li a{
+  color: gray;
 }
 .main .content .bottom {
   min-height: 252px;
