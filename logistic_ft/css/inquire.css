@@ -5,6 +5,7 @@
   min-height: 620px;
   background: url("../images/bg.jpg") no-repeat top / cover;
   padding-bottom: 50px;
+  position: relative;
 }
 .main h1 {
   text-align: center;
@@ -155,7 +156,12 @@
   height: 300px;
   background: #fff;
   padding-bottom: 50px;
-  margin: 0 auto;
+  margin: auto;
   line-height: 300px;
   text-align: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
 }

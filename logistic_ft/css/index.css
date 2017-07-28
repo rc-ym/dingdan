@@ -11,12 +11,14 @@
   margin-bottom: 20px;
   background: #fff;
 }
-.main .about .about_img{
+.main .about>.about_img{
   float: left;
   width: 400px;
+  height: 100%;
 }
 .main .about .about_img img{
   height: 100%;
+  max-width: 100%;
 }
 .main .about .about_text{
   float: left;
@@ -64,6 +66,7 @@
 }
 .main .center .img_box img {
   width: 100%;
+  max-height: 100%;
 }
 .main .center .content {
   width: 100%;

@@ -40,23 +40,15 @@ $(function(){
                 search_alert.css("bottom","-100%");
             },3000)
         }else{
-            if (isNaN(search_text.children('textarea').val())){
-                search_alert.html("必须为数字");
+            var str=/^(\d{1,2}|[a-zA-Z]{1,2})\d+$/;
+            if (str.test(search_text.children('textarea').val())){
+                    alert("接口在index.js第46行")
+            }else{
+                search_alert.html("输入错误");
                 search_alert.css("bottom",0);
                 setTimeout(function(){
                     search_alert.css("bottom","-100%");
                 },3000)
-            }else{
-                if(search_text.children('textarea').val().length==12){
-                    search_alert.html("跳转查询页面接口");
-                    search_alert.css("bottom",0);
-                }else{
-                    search_alert.html("请输入12位订单号号、运单号");
-                    search_alert.css("bottom",0);
-                    setTimeout(function(){
-                        search_alert.css("bottom","-100%");
-                    },3000)
-                }
             }
         }
     })

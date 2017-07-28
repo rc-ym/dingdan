@@ -13,27 +13,19 @@ $(function(){
                 search_alert.css("top","-100%");
             },3000)
         }else{
-            if (isNaN(search_text.children('input').val())){
-                search_alert.html("必须为数字");
+            var str=/^(\d{1,2}|[a-zA-Z]{1,2})\d+$/;
+            if (str.test(search_text.children('input').val())){
+                jiaz.css('display','block');
+                setTimeout(function(){
+                    jiaz.css('display','none');
+                    content.css('display','block');
+                },2000)
+            }else{
+                search_alert.html("输入错误");
                 search_alert.css("top",0);
                 setTimeout(function(){
                     search_alert.css("top","-100%");
                 },3000)
-            }else{
-                if(search_text.children('input').val().length==12){
-                    jiaz.css('display','block');
-                    setTimeout(function(){
-                        jiaz.css('display','none');
-                        content.css('display','block');
-                    },2000)
-
-                }else{
-                    search_alert.html("请输入12位订单号号、运单号");
-                    search_alert.css("top",0);
-                    setTimeout(function(){
-                        search_alert.css("top","-100%");
-                    },3000)
-                }
             }
         }
     })
@@ -47,27 +39,19 @@ $(function(){
                     search_alert.css("top","-100%");
                 },3000)
             }else{
-                if (isNaN(search_text.children('input').val())){
-                    search_alert.html("必须为数字");
+                var str=/^(\d{1,2}|[a-zA-Z]{1,2})\d+$/;
+                if (str.test(search_text.children('input').val())){
+                    jiaz.css('display','block');
+                    setTimeout(function(){
+                        jiaz.css('display','none');
+                        content.css('display','block');
+                    },2000)
+                }else{
+                    search_alert.html("输入错误");
                     search_alert.css("top",0);
                     setTimeout(function(){
                         search_alert.css("top","-100%");
                     },3000)
-                }else{
-                    if(search_text.children('input').val().length==12){
-                        jiaz.css('display','block');
-                        setTimeout(function(){
-                            jiaz.css('display','none');
-                            content.css('display','block');
-                        },2000)
-
-                    }else{
-                        search_alert.html("请输入12位订单号号、运单号");
-                        search_alert.css("top",0);
-                        setTimeout(function(){
-                            search_alert.css("top","-100%");
-                        },3000)
-                    }
                 }
             }
         };
