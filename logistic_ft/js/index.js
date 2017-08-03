@@ -1,33 +1,4 @@
 $(function(){
-    // 轮播图效果
-    var i = 0 ;
-    var timer;
-    var banner_tu=$(".banner_tu");
-    var banner_btn=$('.banner_btn')
-    banner_tu.eq(0).show().siblings('.banner_tu').hide();
-    showTime();
-    banner_btn.hover(function(){
-        i = $(this).index();
-        Show();
-        clearInterval(timer);
-    },function(){
-        showTime();
-    });
-    function showTime(){
-        timer = setInterval(function(){
-            Show();
-            i++;
-            if(i==3){
-                i=0;
-            }
-        },2000);
-    }
-    function Show(){
-        banner_tu.eq(i).fadeIn(300).siblings('.banner_tu').fadeOut(300);
-        banner_btn.eq(i).addClass('active').siblings('.banner_btn').removeClass('active');
-    }
-
-
     // 订单点击效果
     var search_btn=$('.search_btn');
     var search_text=$('.search_text');
@@ -40,7 +11,7 @@ $(function(){
                 search_alert.css("bottom","-100%");
             },3000)
         }else{
-            var str=/^(\d{1,2}|[a-zA-Z]{1,2})\d+$/;
+            var str=/^([a-zA-Z0-9]{0,2})\d+$/;
             if (str.test(search_text.children('textarea').val())){
                     alert("接口在index.js第46行")
             }else{
@@ -53,3 +24,41 @@ $(function(){
         }
     })
 })
+// 轮播图效果
+var banner_tu=$(".banner_tu");
+var banner_btn=$('.banner_btn');
+var num=0;
+banner_tu[0].style.zIndex=2;
+for (var i = banner_btn.length - 1; i >= 0; i--) {
+    banner_btn[i].index=i;
+    banner_btn[i].onclick=function(){
+        for (var j = banner_tu.length - 1; j >= 0; j--) {
+            banner_tu[j].style.zIndex=0;
+            banner_btn[j].className="banner_btn";
+        };
+        banner_tu[this.index].style.zIndex=2;
+        banner_btn[this.index].className="banner_btn active";
+        num=this.index;
+    }
+};
+var t=setInterval(move,3000)
+function move(){
+    num++;
+    if (num>=banner_tu.length) {
+        num=0;
+    };
+    for (var i = banner_tu.length - 1; i >= 0; i--) {
+        banner_tu[i].style.zIndex=0;
+        banner_btn[i].className="banner_btn";
+    };
+    banner_tu[num].style.zIndex=2;
+    banner_btn[num].className="banner_btn active";
+}
+for (var i = banner_tu.length - 1; i >= 0; i--) {
+    banner_tu[i].onmouseover=function(){
+        clearInterval(t)
+    }
+    banner_tu[i].onmouseout=function(){
+        t=setInterval(move,3000)
+    }
+};

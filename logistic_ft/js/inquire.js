@@ -13,7 +13,7 @@ $(function(){
                 search_alert.css("top","-100%");
             },3000)
         }else{
-            var str=/^(\d{1,2}|[a-zA-Z]{1,2})\d+$/;
+            var str=/^([a-zA-Z0-9]{0,2})\d+$/;
             if (str.test(search_text.children('input').val())){
                 jiaz.css('display','block');
                 setTimeout(function(){
@@ -39,7 +39,7 @@ $(function(){
                     search_alert.css("top","-100%");
                 },3000)
             }else{
-                var str=/^(\d{1,2}|[a-zA-Z]{1,2})\d+$/;
+                var str=/^([a-zA-Z0-9]{0,2})\d+$/;
                 if (str.test(search_text.children('input').val())){
                     jiaz.css('display','block');
                     setTimeout(function(){

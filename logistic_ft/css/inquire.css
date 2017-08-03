@@ -3,7 +3,7 @@
   width: 100%;
   min-width: 1000px;
   min-height: 620px;
-  background: url("../images/bg.jpg") no-repeat top / cover;
+  background: #338BC1;
   padding-bottom: 50px;
   position: relative;
 }
